@@ -1,0 +1,9 @@
+<div class="game-of-life">
+  <table>
+    <tr *ngFor="let row in gameGrid">
+      <td *ngFor="let cell in row" [ngClass]="{'alive': cell}">
+        <mat-icon>gamepad</mat-icon>
+      </td>
+    </tr>
+  </table>
+</div>
