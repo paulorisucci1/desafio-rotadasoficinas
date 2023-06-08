@@ -16,4 +16,8 @@ export class ListOrderComponent {
     this.restaurantService = restaurantService
     this.customers = restaurantService.listCustomers()
   }
+
+  public getBill(customer: Customer) {
+    return this.restaurantService.getBill(customer)
+  }
 }

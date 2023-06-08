@@ -1,1 +1,17 @@
-<p>create-order works!</p>
+<main mat-dialog-content class="d-grid flex-row gap-2 justify-content-center align-content-center m-2">
+
+  <h1>Cadastro de novo pedido</h1>
+
+  <mat-card>
+    <h2 class="text-center m-2">Produtos disponíveis: </h2>
+    <ul>
+      <li *ngFor="let product of products">
+        <mat-checkbox [formControl]="checkboxes[product.name!]"></mat-checkbox>
+        <mat-label>{{product.name}}</mat-label>
+      </li>
+    </ul>
+    <mat-form-field appearance="fill" class="mat-content-item-margin text-center">
+      <button mat-raised-button color="primary" (click)="(makeOrder())" [routerLink]="['/listcustomers']">Fazer pedido</button>
+    </mat-form-field>
+  </mat-card>
+</main>

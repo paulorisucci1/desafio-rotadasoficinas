@@ -32,8 +32,9 @@ export class Restaurant {
   }
 
   private getTotalBillFromProductsConsumed(customer: Customer): number {
-    let consumedProducts = this.products.filter(product => product.getCustomers().filter(customer1 => customer1 === customer))
-    return consumedProducts.reduce( (accumulator, product) => accumulator + product.price!, 0)
+
+    let consumedProducts = this.products.filter(product => product.getCustomers().includes(customer))
+    return consumedProducts.reduce( (accumulator, product) => accumulator + product.price! / product.getCustomers().length , 0)
   }
 
   private addTipOntoBill(bill: number) {

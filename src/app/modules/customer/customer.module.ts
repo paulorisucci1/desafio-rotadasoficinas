@@ -33,7 +33,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatDialogModule,
     MatInputModule,
     FormsModule,
-    MatGridListModule,
+    MatGridListModule
   ],
   exports: [
     ListCustomersComponent,

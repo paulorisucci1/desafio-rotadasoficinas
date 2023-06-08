@@ -11,8 +11,9 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatInputModule} from "@angular/material/input";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 
@@ -34,6 +35,8 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatInputModule,
     FormsModule,
     MatGridListModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   exports: [
     ListOrderComponent,

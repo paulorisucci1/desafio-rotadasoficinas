@@ -13,8 +13,8 @@ import {RomanNumberConverterModule} from "./modules/roman-number-converter/roman
 import {GameOfLifeModule} from "./modules/game-of-life/game-of-life.module";
 import {CustomerModule} from "./modules/customer/customer.module";
 import {ProductModule} from "./modules/product/product.module";
-import {RestaurantModule} from "./modules/restaurant/restaurant.module";
 import {OrderModule} from "./modules/order/order.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -32,10 +32,10 @@ import {OrderModule} from "./modules/order/order.module";
     LayoutModule,
     RomanNumberConverterModule,
     GameOfLifeModule,
-    RestaurantModule,
     CustomerModule,
     ProductModule,
-    OrderModule
+    OrderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
