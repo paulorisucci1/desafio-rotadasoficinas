@@ -1,0 +1,40 @@
+<main mat-dialog-content class="d-flex justify-content-center gap-5 m-3">
+
+  <mat-card class="p-3">
+    <mat-card-title>Conversor de número arábico para romano</mat-card-title>
+
+    <mat-form-field appearance="fill" >
+      <mat-label>Arabic Number</mat-label>
+      <input matInput [(ngModel)]="arabicToRomanConverter.arabicNumber" placeholder="Digite o número arábico" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-content-item-margin">
+      <button mat-raised-button color="primary" (click)="convertToRoman()">Converter</button>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-content-item-margin">
+      Resultado: {{arabicToRomanConverter.romanNumber}}
+    </mat-form-field>
+  </mat-card>
+  <mat-card class="p-3">
+    <mat-card-title>Conversor de número romano para arábico</mat-card-title>
+
+    <mat-form-field appearance="fill" >
+      <mat-label>Arabic Number</mat-label>
+      <input matInput [(ngModel)]="romanToArabicConverter.romanNumber" placeholder="Digite o número arábico" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-content-item-margin">
+      <button mat-raised-button color="primary" (click)="convertToArabic()">Converter</button>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-content-item-margin">
+      Resultado: {{romanToArabicConverter.arabicNumber}}
+    </mat-form-field>
+  </mat-card>
+</main>
+
+<!--<div mat-dialog-actions align="end">-->
+<!--  <button mat-raised-button color="accent" (click)="cancel()"><mat-icon>close</mat-icon></button>-->
+<!--  <button mat-raised-button color="primary" cdkFocusInitial (click)="inserirOuAlterarUsuario()">Enviar</button>-->
+<!--</div>-->

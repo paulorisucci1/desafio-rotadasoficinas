@@ -11,14 +11,12 @@ import {FormsModule} from "@angular/forms";
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDialogModule} from "@angular/material/dialog";
 
-import { RomanToArabicComponent } from './roman-to-arabic/roman-to-arabic.component';
-import { ArabicToRomanComponent } from './arabic-to-roman/arabic-to-roman.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NumberConverterComponent } from './number-converter/number-converter.component';
 
 @NgModule({
   declarations: [
-    RomanToArabicComponent,
-    ArabicToRomanComponent
+    NumberConverterComponent
   ],
   imports: [
     CommonModule,
@@ -33,12 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatDialogModule,
   ],
   bootstrap: [
-    RomanToArabicComponent,
-    ArabicToRomanComponent
+    NumberConverterComponent
   ],
   exports: [
-    RomanToArabicComponent,
-    ArabicToRomanComponent
+    NumberConverterComponent
   ]
 })
 export class RomanNumberConverterModule { }

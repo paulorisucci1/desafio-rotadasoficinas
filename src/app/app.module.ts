@@ -10,6 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import {RomanNumberConverterModule} from "./modules/roman-number-converter/roman-number-converter.module";
+import {GameOfLifeModule} from "./modules/game-of-life/game-of-life.module";
+import {CustomerModule} from "./modules/customer/customer.module";
+import {ProductModule} from "./modules/product/product.module";
+import {RestaurantModule} from "./modules/restaurant/restaurant.module";
+import {OrderModule} from "./modules/order/order.module";
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import {RomanNumberConverterModule} from "./modules/roman-number-converter/roman
     MatButtonModule,
     BrowserModule,
     LayoutModule,
-    RomanNumberConverterModule
+    RomanNumberConverterModule,
+    GameOfLifeModule,
+    RestaurantModule,
+    CustomerModule,
+    ProductModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

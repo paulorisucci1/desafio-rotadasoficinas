@@ -1,49 +1,47 @@
 import { Customer } from "./Customer"
-import { Dish } from "./Dish"
+import { Product } from "./Product"
 
-class Restaurant {
-  id?: number
+export class Restaurant {
   name?: string
-  private dishes: Array<Dish>
-  private customers: Array<Customer>
+  readonly products: Array<Product>
+  readonly customers: Array<Customer>
 
-  constructor(id?: number, name?: string) {
-    this.id = id
+  constructor(name?: string) {
     this.name = name
-    this.dishes = []
+    this.products = []
     this.customers = []
   }
 
-  public addDish(dish: Dish): void {
-    this.dishes.push(dish)
+  public addProduct(product: Product): void {
+    this.products.push(product)
   }
 
   public addCustomer(customer: Customer): void {
     this.customers.push(customer)
   }
 
-  public makeOrder(customers: Array<Customer>, dish: Dish) {
+  public makeOrder(customers: Array<Customer>, product: Product) {
     customers.forEach(
-      customer => this.registerCustomerOrder(customer, dish)
+      customer => this.registerCustomerOrder(customer, product)
     )
   }
 
   public getCustomerBill(customer: Customer) {
-    let totalBill = this.getTotalBillFromDishesConsumed(customer)
+    let totalBill = this.getTotalBillFromProductsConsumed(customer)
     return this.addTipOntoBill(totalBill)
   }
 
-  private getTotalBillFromDishesConsumed(customer: Customer): number {
-    let consumedDishes = this.dishes.filter(dish => dish.getCustomers().filter(customer1 => customer1 === customer))
-    return consumedDishes.reduce( (accumulator, dish) => accumulator + dish.price, 0)
+  private getTotalBillFromProductsConsumed(customer: Customer): number {
+    let consumedProducts = this.products.filter(product => product.getCustomers().filter(customer1 => customer1 === customer))
+    return consumedProducts.reduce( (accumulator, product) => accumulator + product.price!, 0)
   }
 
   private addTipOntoBill(bill: number) {
     return bill * 1.1
   }
 
-  private registerCustomerOrder(customer: Customer, dish: Dish) {
-    customer.addDish(dish)
-    dish.addCustomer(customer)
+  private registerCustomerOrder(customer: Customer, product: Product) {
+    customer.addProduct(product)
+    product.addCustomer(customer)
   }
 }

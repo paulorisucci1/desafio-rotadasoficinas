@@ -1,9 +1,19 @@
-<div class="game-of-life">
-  <table>
-    <tr *ngFor="let row in gameGrid">
-      <td *ngFor="let cell in row" [ngClass]="{'alive': cell}">
-        <mat-icon>gamepad</mat-icon>
-      </td>
-    </tr>
-  </table>
-</div>
+<main class="d-grid flex-row gap-5 justify-content-center align-content-center m-5">
+
+  <section class="d-flex justify-content-between">
+    <button mat-raised-button color="primary" (click)="nextGeneration()">Next Generation</button>
+    <button mat-raised-button color="warn" (click)="reset()">Reset</button>
+  </section>
+
+  <section>
+    <table>
+      <tr *ngFor="let row of gameGrid">
+        <td *ngFor="let cell of row" [ngClass]="{'alive': cell}">
+          <mat-icon *ngIf="cell">radio_button_checked</mat-icon>
+          <mat-icon *ngIf="!cell">close</mat-icon>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+</main>

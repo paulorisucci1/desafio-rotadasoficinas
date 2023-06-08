@@ -1,15 +1,13 @@
 import { Customer } from "./Customer"
 
-export class Dish {
+export class Product {
 
-  id?: number
   name?: string
-  price: number
+  price?: number
   private customers: Array<Customer>
 
-  constructor(price: number, id?: number, name?: string) {
+  constructor(price?: number, name?: string) {
     this.price = price
-    this.id = id
     this.name = name
     this.customers = []
   }

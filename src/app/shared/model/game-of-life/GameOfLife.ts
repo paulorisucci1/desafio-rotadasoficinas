@@ -78,17 +78,4 @@ export class GameOfLife {
 
     return count;
   }
-
-  public display(): void {
-    for (let row = 0; row < this.height; row++) {
-      let line = '';
-
-      for (let col = 0; col < this.width; col++) {
-        const cell = this.grid[row][col];
-        line += cell ? '■ ' : '□ ';
-      }
-
-      console.log(line);
-    }
-  }
 }

@@ -19,4 +19,12 @@ export class PlayGameComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nextGeneration() {
+    this.gameGrid = this.gameOfLifeService.getNextGeneration()
+  }
+
+  reset() {
+    this.gameOfLifeService.resetGame()
+    this.gameGrid = this.gameOfLifeService.getGrid()
+  }
 }

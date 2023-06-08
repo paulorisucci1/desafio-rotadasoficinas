@@ -1,21 +1,19 @@
-import { Dish } from "./Dish"
+import { Product } from "./Product"
 
 export class Customer {
-  id?: number
   name?: string
-  private dishes: Array<Dish>
+  private products: Array<Product>
 
-  constructor(id?: number, name?: string) {
-    this.id = id
+  constructor(name?: string) {
     this.name = name
-    this.dishes = []
+    this.products = []
   }
 
-  public getDishes(): Array<Dish> {
-    return new Array(...this.dishes)
+  public getProducts(): Array<Product> {
+    return new Array(...this.products)
   }
 
-  public addDish(dish: Dish): void {
-    this.dishes.push(dish)
+  public addProduct(product: Product): void {
+    this.products.push(product)
   }
 }

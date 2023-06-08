@@ -1,0 +1,19 @@
+<main mat-dialog-content class="d-grid flex-row gap-2 justify-content-center align-content-center m-2">
+
+  <h1>Cadastro de novo produto</h1>
+
+  <mat-card>
+    <mat-form-field appearance="fill" class="mat-content-item-margin text-center">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="product.name" placeholder="Digite o nome" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="mat-content-item-margin text-center">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="product.price" placeholder="Digite o preço" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-content-item-margin text-center">
+      <button mat-raised-button color="primary" (click)="(addProduct())" [routerLink]="['/listproducts']">Adicionar</button>
+    </mat-form-field>
+  </mat-card>
+</main>
